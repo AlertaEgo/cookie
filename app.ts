@@ -1,10 +1,10 @@
 export const counterOfIncreasing = (measurments: number[]) : number => {
     let count = 0;
-    for(let i=0; i<measurments.length; i++){
-        if(measurments[i+1] > measurments[i]){
+    measurments.map((num, index) => {
+        if(num > measurments[index - 1]){
             count++;
         }
-    }
+    })
     return count;
 }
 
